@@ -1,0 +1,164 @@
+<template>
+    <template lwc:if={hasResult}>
+        <section
+            role="dialog"
+            tabindex="-1"
+            aria-modal="true"
+            aria-labelledby="inspector-modal-heading"
+            class="slds-modal slds-fade-in-open slds-modal_large"
+        >
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        alternative-text="Close"
+                        title="Close"
+                        variant="bare-inverse"
+                        size="large"
+                        class="slds-modal__close"
+                        onclick={handleClose}
+                    ></lightning-button-icon>
+                    <h2 id="inspector-modal-heading" class="slds-modal__title slds-hyphenate">
+                        Result Inspector — {testCaseName}
+                    </h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-m-bottom_medium slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <lightning-badge
+                            label={deterministicBadgeLabel}
+                            class={deterministicBadgeClass}
+                            data-id="deterministic-badge"
+                        ></lightning-badge>
+                        <lightning-badge
+                            label={llmJudgeBadgeLabel}
+                            class={llmJudgeBadgeClass}
+                            data-id="llm-badge"
+                        ></lightning-badge>
+                        <template lwc:if={category}>
+                            <lightning-badge
+                                label={category}
+                                class="slds-m-right_x-small"
+                                data-id="category-badge"
+                            ></lightning-badge>
+                        </template>
+                        <template lwc:if={hasLatency}>
+                            <lightning-badge
+                                label={latencyLabel}
+                                class="slds-m-right_x-small"
+                                data-id="latency-badge"
+                            ></lightning-badge>
+                        </template>
+                        <template lwc:if={isRegressionDetected}>
+                            <lightning-badge
+                                label="Regression Detected"
+                                class="slds-theme_error"
+                                data-id="regression-badge"
+                            ></lightning-badge>
+                        </template>
+                    </div>
+
+                    <template lwc:if={showVersionDiff}>
+                        <div
+                            class={versionDiffBannerClass}
+                            role="status"
+                            data-id="version-diff-banner"
+                        >
+                            <p class="slds-text-heading_small slds-m-bottom_x-small">
+                                {versionDiffTitle}
+                            </p>
+                            <div class="slds-grid slds-wrap slds-gutters">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                    <p class="slds-text-title_caps slds-m-bottom_xx-small">
+                                        Previous Run Topic
+                                    </p>
+                                    <div class="slds-box slds-theme_default" data-id="previous-topic-box">
+                                        <p>{previousTopic}</p>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                    <p class="slds-text-title_caps slds-m-bottom_xx-small">
+                                        Current Actual Topic
+                                    </p>
+                                    <div class="slds-box slds-theme_default" data-id="current-topic-box">
+                                        <p>{actualTopic}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template lwc:if={hasFailureReason}>
+                        <div
+                            class="slds-box slds-theme_error slds-m-bottom_medium"
+                            role="alert"
+                            data-id="failure-reason-box"
+                        >
+                            <p class="slds-text-heading_small slds-m-bottom_xx-small">Failure Reason</p>
+                            <p>{failureReason}</p>
+                        </div>
+                    </template>
+
+                    <div class="slds-m-bottom_medium">
+                        <p class="slds-text-title_caps slds-m-bottom_xx-small">Utterance</p>
+                        <div class="slds-box slds-theme_shade" data-id="utterance-box">
+                            <p>{utterance}</p>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_medium">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Expected Topic</p>
+                            <div class="slds-box" data-id="expected-topic-box">
+                                <p>{expectedTopic}</p>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Actual Topic</p>
+                            <div class="slds-box" data-id="actual-topic-box">
+                                <p>{actualTopic}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_medium">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Expected Action</p>
+                            <div class="slds-box">
+                                <p>{expectedAction}</p>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Forbidden Action</p>
+                            <div class="slds-box">
+                                <p>{forbiddenAction}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-m-bottom_medium">
+                        <p class="slds-text-title_caps slds-m-bottom_xx-small">Actual Actions JSON</p>
+                        <pre class="slds-box slds-theme_shade inspector-pre" data-id="actions-json-box">{formattedActionsJson}</pre>
+                    </div>
+
+                    <div>
+                        <p class="slds-text-title_caps slds-m-bottom_xx-small">Agent Response</p>
+                        <div class="slds-box slds-theme_shade inspector-response" data-id="agent-response-box">
+                            <p>{agentResponse}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button
+                        label="Close"
+                        variant="neutral"
+                        onclick={handleClose}
+                        data-id="close-button"
+                    ></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Test_Run__c</fullName>
+    <description>Parent Agent Test Run for this result.</description>
+    <label>Agent Test Run</label>
+    <referenceTo>Agent_Test_Run__c</referenceTo>
+    <relationshipLabel>Agent Test Results</relationshipLabel>
+    <relationshipName>Agent_Test_Results</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

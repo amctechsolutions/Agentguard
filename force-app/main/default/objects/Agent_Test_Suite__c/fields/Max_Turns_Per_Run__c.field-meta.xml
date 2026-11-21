@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_Turns_Per_Run__c</fullName>
+    <defaultValue>50</defaultValue>
+    <description>Maximum number of agent turns allowed per test run to enforce a flex-credit budget cap.</description>
+    <externalId>false</externalId>
+    <label>Max Turns Per Run (Credit Cap)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

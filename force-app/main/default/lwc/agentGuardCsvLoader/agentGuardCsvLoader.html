@@ -1,0 +1,67 @@
+<template>
+    <lightning-card title="CSV Test Case Loader" icon-name="utility:upload" class="slds-m-bottom_medium">
+        <div slot="actions">
+            <lightning-button
+                label="Close"
+                variant="neutral"
+                onclick={handleClose}
+                data-id="csv-close-button"
+            ></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+            <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_small">
+                Required CSV headers: <strong>{requiredHeadersLabel}</strong>
+            </p>
+
+            <lightning-input
+                type="file"
+                label="Select CSV File"
+                accept=".csv"
+                onchange={handleFileChange}
+                data-id="csv-file-input"
+            ></lightning-input>
+
+            <template lwc:if={fileName}>
+                <p class="slds-text-body_small slds-m-top_x-small" data-id="csv-file-name">
+                    Selected file: {fileName}
+                </p>
+            </template>
+
+            <template lwc:if={errorMessage}>
+                <div
+                    class="slds-box slds-theme_error slds-m-top_small"
+                    role="alert"
+                    data-id="csv-error-banner"
+                >
+                    <p>{errorMessage}</p>
+                </div>
+            </template>
+
+            <template lwc:if={hasParsedRows}>
+                <div class="slds-m-top_medium">
+                    <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small">
+                        <p class="slds-text-heading_small" data-id="csv-parsed-count">
+                            {parsedCountLabel}
+                        </p>
+                        <lightning-button
+                            label="Import Test Cases"
+                            variant="brand"
+                            disabled={isImportDisabled}
+                            onclick={handleImport}
+                            data-id="csv-import-button"
+                        ></lightning-button>
+                    </div>
+
+                    <lightning-datatable
+                        key-field="rowKey"
+                        data={parsedRows}
+                        columns={previewColumns}
+                        hide-checkbox-column
+                        data-id="csv-preview-table"
+                    ></lightning-datatable>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

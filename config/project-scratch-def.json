@@ -1,0 +1,24 @@
+{
+  "orgName": "AgentGuard Dev Scratch",
+  "edition": "Developer",
+  "features": [
+    "LightningExperience",
+    "EinsteinGPT",
+    "Agentforce",
+    "Bots"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "botSettings": {
+      "enableBots": true
+    },
+    "einsteinGptSettings": {
+      "enableEinsteinGptPlatform": true
+    }
+  }
+}

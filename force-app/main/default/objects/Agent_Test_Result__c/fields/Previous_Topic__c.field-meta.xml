@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Topic__c</fullName>
+    <description>Agentforce topic developer name selected in the previous baseline run for version-diff comparison.</description>
+    <externalId>false</externalId>
+    <label>Previous Run Topic</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

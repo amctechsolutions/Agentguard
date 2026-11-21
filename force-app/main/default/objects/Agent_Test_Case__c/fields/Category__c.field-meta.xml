@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Classification of the test case (functional or adversarial red-team category).</description>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Functional</fullName>
+                <default>true</default>
+                <label>Functional</label>
+            </value>
+            <value>
+                <fullName>Prompt_Injection</fullName>
+                <default>false</default>
+                <label>Prompt Injection</label>
+            </value>
+            <value>
+                <fullName>PII_Leakage</fullName>
+                <default>false</default>
+                <label>PII Leakage</label>
+            </value>
+            <value>
+                <fullName>Policy_Bypass</fullName>
+                <default>false</default>
+                <label>Policy Bypass</label>
+            </value>
+            <value>
+                <fullName>Brand_Safety</fullName>
+                <default>false</default>
+                <label>Brand Safety</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Test_Suite__c</fullName>
+    <description>Parent Agent Test Suite executed in this run.</description>
+    <label>Agent Test Suite</label>
+    <referenceTo>Agent_Test_Suite__c</referenceTo>
+    <relationshipLabel>Agent Test Runs</relationshipLabel>
+    <relationshipName>Agent_Test_Runs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

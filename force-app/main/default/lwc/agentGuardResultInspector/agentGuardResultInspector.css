@@ -1,0 +1,15 @@
+.inspector-pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: monospace;
+    font-size: 0.8125rem;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.inspector-response {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 240px;
+    overflow-y: auto;
+}

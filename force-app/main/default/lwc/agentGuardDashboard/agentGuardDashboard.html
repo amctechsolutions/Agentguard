@@ -1,0 +1,170 @@
+<template>
+    <lightning-card title="AgentGuard — Agentforce Testing &amp; Red-Team Suite" icon-name="standard:bot">
+        <div class="slds-p-around_medium">
+            <!-- Toolbar -->
+            <div class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-end slds-m-bottom_medium">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                    <lightning-combobox
+                        name="suiteSelector"
+                        label="Test Suite"
+                        placeholder="Select a Test Suite"
+                        value={selectedSuiteId}
+                        options={suiteOptions}
+                        onchange={handleSuiteChange}
+                        data-id="suite-combobox"
+                    ></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-m-top_small">
+                    <lightning-button
+                        label="Run Suite"
+                        variant="brand"
+                        icon-name="utility:play"
+                        disabled={isRunButtonDisabled}
+                        onclick={handleRunSuite}
+                        class="slds-m-right_x-small"
+                        data-id="run-suite-button"
+                    ></lightning-button>
+                    <lightning-button
+                        label="Import 25 Red-Team Tests"
+                        variant="neutral"
+                        icon-name="utility:shield"
+                        disabled={isControlsDisabled}
+                        onclick={handleImportRedTeam}
+                        class="slds-m-right_x-small"
+                        data-id="import-redteam-button"
+                    ></lightning-button>
+                    <lightning-button
+                        label="Upload CSV"
+                        variant={csvButtonVariant}
+                        icon-name="utility:upload"
+                        disabled={isControlsDisabled}
+                        onclick={handleToggleCsvLoader}
+                        class="slds-m-right_small"
+                        data-id="toggle-csv-button"
+                    ></lightning-button>
+                    <template lwc:if={creditCapLabel}>
+                        <lightning-badge
+                            label={creditCapLabel}
+                            icon-name="utility:budget_period"
+                            data-id="credit-cap-badge"
+                        ></lightning-badge>
+                    </template>
+                </div>
+            </div>
+
+            <!-- CSV Loader Drawer -->
+            <template lwc:if={showCsvLoader}>
+                <c-agent-guard-csv-loader
+                    suite-id={selectedSuiteId}
+                    onimportsuccess={handleCsvImportSuccess}
+                    onclose={handleCloseCsvLoader}
+                    data-id="csv-loader"
+                ></c-agent-guard-csv-loader>
+            </template>
+
+            <!-- KPI Summary Cards -->
+            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_medium">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                    <div class="slds-box slds-theme_default kpi-card" data-id="kpi-status-card">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">
+                            Latest Run Status
+                        </p>
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <lightning-badge
+                                label={latestRunStatus}
+                                class={latestRunStatusBadgeClass}
+                                data-id="kpi-status-badge"
+                            ></lightning-badge>
+                            <template lwc:if={isPollingActive}>
+                                <lightning-spinner
+                                    alternative-text="Polling run status"
+                                    size="small"
+                                    class="slds-m-left_small"
+                                    data-id="polling-spinner"
+                                ></lightning-spinner>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                    <div class="slds-box slds-theme_default kpi-card" data-id="kpi-pass-rate-card">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">
+                            Pass Rate %
+                        </p>
+                        <p class="slds-text-heading_large" data-id="kpi-pass-rate-value">
+                            {formattedPassRate}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                    <div class="slds-box slds-theme_default kpi-card" data-id="kpi-total-tests-card">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">
+                            Total Tests
+                        </p>
+                        <p class="slds-text-heading_large" data-id="kpi-total-tests-value">
+                            {totalTests}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                    <div class="slds-box slds-theme_default kpi-card" data-id="kpi-failed-tests-card">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">
+                            Failed Tests
+                        </p>
+                        <p class="slds-text-heading_large" data-id="kpi-failed-tests-value">
+                            {failedTests}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                    <div class={regressionCardClass} data-id="kpi-regressions-card">
+                        <p class={regressionLabelClass}>
+                            Regressions Detected
+                        </p>
+                        <p class="slds-text-heading_large" data-id="kpi-regressions-value">
+                            {regressionCount}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Table -->
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-vertical_large">
+                    <lightning-spinner alternative-text="Loading AgentGuard data" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:if={hasResults}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={results}
+                    columns={columns}
+                    hide-checkbox-column
+                    onrowaction={handleRowAction}
+                    data-id="results-datatable"
+                ></lightning-datatable>
+            </template>
+            <template lwc:else>
+                <div class="slds-box slds-theme_shade slds-text-align_center slds-p-vertical_large" data-id="empty-results">
+                    <p class="slds-text-body_regular slds-text-color_weak">
+                        No test results available for the selected suite yet. Click "Run Suite" to execute tests.
+                    </p>
+                </div>
+            </template>
+        </div>
+
+        <!-- Result Inspector Modal -->
+        <template lwc:if={isInspectorOpen}>
+            <c-agent-guard-result-inspector
+                result={selectedResult}
+                onclose={handleCloseInspector}
+                data-id="result-inspector"
+            ></c-agent-guard-result-inspector>
+        </template>
+    </lightning-card>
+</template>

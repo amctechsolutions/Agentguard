@@ -1,0 +1,10 @@
+package.xml
+package-lock.json
+node_modules/
+**/jsconfig.json
+**/.eslintrc.json
+**/__tests__/**
+.sf/
+.sfdx/
+.vscode/
+.DS_Store
