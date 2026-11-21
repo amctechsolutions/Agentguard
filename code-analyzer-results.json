@@ -1,0 +1,3096 @@
+{
+  "runDir": "/Users/user/agentguard/",
+  "violationCounts": {
+    "total": 128,
+    "sev1": 1,
+    "sev2": 0,
+    "sev3": 36,
+    "sev4": 91,
+    "sev5": 0
+  },
+  "versions": {
+    "code-analyzer": "0.53.0",
+    "retire-js": "0.39.0",
+    "regex": "0.40.0",
+    "eslint": "0.47.0",
+    "pmd": "0.46.0",
+    "cpd": "0.46.0",
+    "flow": "unknown"
+  },
+  "violations": [
+    {
+      "rule": "@lwc/lwc/no-async-operation",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardCsvLoader/__tests__/agentGuardCsvLoader.test.js",
+          "startLine": 11,
+          "startColumn": 54,
+          "endLine": 11,
+          "endColumn": 76
+        }
+      ],
+      "message": "Restricted async operation \"setTimeout\"",
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-async-operation.md"
+      ]
+    },
+    {
+      "rule": "@salesforce-ux/slds/no-hardcoded-values-slds2",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "Design",
+        "CSS",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardDashboard/agentGuardDashboard.css",
+          "startLine": 2,
+          "startColumn": 17,
+          "endLine": 2,
+          "endColumn": 23
+        }
+      ],
+      "message": "There's no replacement styling hook for the 5.5rem static value. Remove the static value.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-hardcoded-values-slds2"
+      ]
+    },
+    {
+      "rule": "@lwc/lwc-platform/no-inline-disable",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardDashboard/agentGuardDashboard.js",
+          "startLine": 260,
+          "startColumn": 1,
+          "endLine": 260,
+          "endColumn": 64
+        }
+      ],
+      "message": "Inline rule disablement not allowed: @lwc/lwc/no-async-operation",
+      "resources": []
+    },
+    {
+      "rule": "@salesforce-ux/slds/no-hardcoded-values-slds2",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "Design",
+        "CSS",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardResultInspector/agentGuardResultInspector.css",
+          "startLine": 5,
+          "startColumn": 16,
+          "endLine": 5,
+          "endColumn": 25
+        }
+      ],
+      "message": "Consider replacing the 0.8125rem static value with an SLDS 2 styling hook that has a similar value: --slds-g-font-scale-base.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-hardcoded-values-slds2"
+      ]
+    },
+    {
+      "rule": "@salesforce-ux/slds/no-hardcoded-values-slds2",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "Design",
+        "CSS",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardResultInspector/agentGuardResultInspector.css",
+          "startLine": 6,
+          "startColumn": 17,
+          "endLine": 6,
+          "endColumn": 22
+        }
+      ],
+      "message": "There's no replacement styling hook for the 220px static value. Remove the static value.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-hardcoded-values-slds2"
+      ]
+    },
+    {
+      "rule": "@salesforce-ux/slds/no-hardcoded-values-slds2",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "Design",
+        "CSS",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardResultInspector/agentGuardResultInspector.css",
+          "startLine": 13,
+          "startColumn": 17,
+          "endLine": 13,
+          "endColumn": 22
+        }
+      ],
+      "message": "Consider replacing the 240px static value with an SLDS 2 styling hook that has a similar value: --slds-g-sizing-14.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-hardcoded-values-slds2"
+      ]
+    },
+    {
+      "rule": "@salesforce-ux/slds/modal-close-button-issue",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "ErrorProne",
+        "HTML",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardResultInspector/agentGuardResultInspector.html",
+          "startLine": 16,
+          "startColumn": 34,
+          "endLine": 16,
+          "endColumn": 46
+        }
+      ],
+      "message": "Change the variant attribute value from bare-inverse to bare in <lightning-button-icon> or <lightning-icon>.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#modal-close-button-issue"
+      ]
+    },
+    {
+      "rule": "@salesforce-ux/slds/modal-close-button-issue",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "ErrorProne",
+        "HTML",
+        "Fixable"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/lwc/agentGuardResultInspector/agentGuardResultInspector.html",
+          "startLine": 18,
+          "startColumn": 32,
+          "endLine": 18,
+          "endColumn": 49
+        }
+      ],
+      "message": "Add or move slds-button and slds-button_icon to the class attribute of the <button> element or <lightning-button-icon> component.",
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#modal-close-button-issue"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 18,
+          "startColumn": 19,
+          "endLine": 34,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc @return",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 40,
+          "startColumn": 19,
+          "endLine": 64,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc @return",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 40,
+          "startColumn": 19,
+          "endLine": 64,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 70,
+          "startColumn": 19,
+          "endLine": 101,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc @return",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 70,
+          "startColumn": 19,
+          "endLine": 101,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 107,
+          "startColumn": 19,
+          "endLine": 119,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc @return",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 107,
+          "startColumn": 19,
+          "endLine": 119,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 126,
+          "startColumn": 19,
+          "endLine": 163,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidNonRestrictiveQueries",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 131,
+          "startColumn": 49,
+          "endLine": 143,
+          "endColumn": 10
+        }
+      ],
+      "message": "Avoid SOQL queries without a where or limit statement",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#avoidnonrestrictivequeries"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 170,
+          "startColumn": 19,
+          "endLine": 256,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardController.cls",
+          "startLine": 170,
+          "startColumn": 19,
+          "endLine": 256,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'importCsvTestCases(Id, List<Map<String, String>>)' has a cyclomatic complexity of 11.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 8
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 4,
+          "startColumn": 16,
+          "endLine": 9,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 12,
+          "startColumn": 5,
+          "endLine": 12,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 13,
+          "startColumn": 12,
+          "endLine": 80,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 82,
+          "startColumn": 5,
+          "endLine": 82,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 83,
+          "startColumn": 12,
+          "endLine": 150,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardDashboardControllerTest.cls",
+          "startLine": 152,
+          "startColumn": 5,
+          "endLine": 152,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 5,
+          "startColumn": 21,
+          "endLine": 217,
+          "endColumn": 2
+        }
+      ],
+      "message": "The class 'AgentGuardEvaluatorService' has a total cognitive complexity of 56 (highest 26), current threshold is 50",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 5,
+          "startColumn": 21,
+          "endLine": 217,
+          "endColumn": 2
+        }
+      ],
+      "message": "The class 'AgentGuardEvaluatorService' has a total cyclomatic complexity of 50 (highest 17).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 15,
+          "startColumn": 29,
+          "endLine": 15,
+          "endColumn": 68
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 15,
+          "startColumn": 62,
+          "endLine": 15,
+          "endColumn": 66
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 16,
+          "startColumn": 29,
+          "endLine": 16,
+          "endColumn": 63
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 16,
+          "startColumn": 57,
+          "endLine": 16,
+          "endColumn": 61
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 17,
+          "startColumn": 29,
+          "endLine": 17,
+          "endColumn": 62
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 17,
+          "startColumn": 56,
+          "endLine": 17,
+          "endColumn": 60
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 18,
+          "startColumn": 29,
+          "endLine": 18,
+          "endColumn": 63
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 20,
+          "startColumn": 16,
+          "endLine": 25,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 35,
+          "startColumn": 19,
+          "endLine": 105,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'evaluate(Agent_Test_Case__c, AgentGuardRuntimeClient.AgentTurnTrace, Boolean)' has a cognitive complexity of 26, current threshold is 15",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 35,
+          "startColumn": 19,
+          "endLine": 105,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'evaluate(Agent_Test_Case__c, AgentGuardRuntimeClient.AgentTurnTrace, Boolean)' has a cyclomatic complexity of 17.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 38,
+          "startColumn": 9,
+          "endLine": 38,
+          "endColumn": 31
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorService.cls",
+          "startLine": 140,
+          "startColumn": 20,
+          "endLine": 185,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'evaluateWithLlmJudge(String, String, String)' has a cyclomatic complexity of 11.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 8
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 9,
+          "startColumn": 16,
+          "endLine": 13,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 9,
+          "startColumn": 62,
+          "endLine": 9,
+          "endColumn": 77
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 15,
+          "startColumn": 16,
+          "endLine": 24,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 27,
+          "startColumn": 5,
+          "endLine": 27,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 28,
+          "startColumn": 12,
+          "endLine": 46,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 48,
+          "startColumn": 5,
+          "endLine": 48,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 49,
+          "startColumn": 12,
+          "endLine": 69,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 71,
+          "startColumn": 5,
+          "endLine": 71,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 72,
+          "startColumn": 12,
+          "endLine": 116,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 118,
+          "startColumn": 5,
+          "endLine": 118,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardEvaluatorServiceTest.cls",
+          "startLine": 119,
+          "startColumn": 12,
+          "endLine": 161,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 5,
+          "startColumn": 21,
+          "endLine": 275,
+          "endColumn": 2
+        }
+      ],
+      "message": "The class 'AgentGuardRunnerQueueable' has a total cyclomatic complexity of 42 (highest 19).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 12,
+          "startColumn": 12,
+          "endLine": 14,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 16,
+          "startColumn": 12,
+          "endLine": 19,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 21,
+          "startColumn": 12,
+          "endLine": 156,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "NcssCount",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Apex",
+        "Custom"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 21,
+          "startColumn": 12,
+          "endLine": 156,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'execute(QueueableContext)' has a NCSS line count of 56 (limit: 40).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#ncsscount"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 21,
+          "startColumn": 12,
+          "endLine": 156,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'execute(QueueableContext)' has a cognitive complexity of 26, current threshold is 15",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 21,
+          "startColumn": 12,
+          "endLine": 156,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'execute(QueueableContext)' has a cyclomatic complexity of 19.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "QueueableWithoutFinalizer",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 21,
+          "startColumn": 12,
+          "endLine": 156,
+          "endColumn": 6
+        }
+      ],
+      "message": "This Queueable doesnt attach a Finalizer",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#queueablewithoutfinalizer"
+      ]
+    },
+    {
+      "rule": "AvoidDebugStatements",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 154,
+          "startColumn": 13,
+          "endLine": 154,
+          "endColumn": 100
+        }
+      ],
+      "message": "Avoid debug statements since they impact on performance",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#avoiddebugstatements"
+      ]
+    },
+    {
+      "rule": "ExcessiveParameterList",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueable.cls",
+          "startLine": 210,
+          "startColumn": 20,
+          "endLine": 214,
+          "endColumn": 61
+        }
+      ],
+      "message": "Avoid long parameter lists (4 parameters - threshold is 4).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#excessiveparameterlist"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 8
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 6,
+          "startColumn": 16,
+          "endLine": 8,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 6,
+          "startColumn": 39,
+          "endLine": 6,
+          "endColumn": 63
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 10,
+          "startColumn": 16,
+          "endLine": 36,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 39,
+          "startColumn": 5,
+          "endLine": 39,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 40,
+          "startColumn": 12,
+          "endLine": 120,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 122,
+          "startColumn": 5,
+          "endLine": 122,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 123,
+          "startColumn": 12,
+          "endLine": 160,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 162,
+          "startColumn": 5,
+          "endLine": 162,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 163,
+          "startColumn": 12,
+          "endLine": 188,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 190,
+          "startColumn": 5,
+          "endLine": 190,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 191,
+          "startColumn": 12,
+          "endLine": 266,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 268,
+          "startColumn": 5,
+          "endLine": 268,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 269,
+          "startColumn": 12,
+          "endLine": 391,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 394,
+          "startColumn": 16,
+          "endLine": 409,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 412,
+          "startColumn": 5,
+          "endLine": 412,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRunnerQueueableTest.cls",
+          "startLine": 413,
+          "startColumn": 12,
+          "endLine": 444,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 5,
+          "startColumn": 21,
+          "endLine": 414,
+          "endColumn": 2
+        }
+      ],
+      "message": "The class 'AgentGuardRuntimeClient' has a total cognitive complexity of 103 (highest 38), current threshold is 50",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 5,
+          "startColumn": 21,
+          "endLine": 414,
+          "endColumn": 2
+        }
+      ],
+      "message": "The class 'AgentGuardRuntimeClient' has a total cyclomatic complexity of 91 (highest 23).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 9,
+          "startColumn": 12,
+          "endLine": 9,
+          "endColumn": 65
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 15,
+          "startColumn": 29,
+          "endLine": 15,
+          "endColumn": 61
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 16,
+          "startColumn": 29,
+          "endLine": 16,
+          "endColumn": 71
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 17,
+          "startColumn": 29,
+          "endLine": 17,
+          "endColumn": 62
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 18,
+          "startColumn": 29,
+          "endLine": 18,
+          "endColumn": 60
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 19,
+          "startColumn": 29,
+          "endLine": 19,
+          "endColumn": 62
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 20,
+          "startColumn": 29,
+          "endLine": 20,
+          "endColumn": 58
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 20,
+          "startColumn": 52,
+          "endLine": 20,
+          "endColumn": 56
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 21,
+          "startColumn": 29,
+          "endLine": 21,
+          "endColumn": 62
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 23,
+          "startColumn": 16,
+          "endLine": 27,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 35,
+          "startColumn": 19,
+          "endLine": 78,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'startSession(String)' has a cyclomatic complexity of 12.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 88,
+          "startColumn": 19,
+          "endLine": 140,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'executeSingleTurn(String, String)' has a cyclomatic complexity of 11.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "AvoidDebugStatements",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 246,
+          "startColumn": 13,
+          "endLine": 246,
+          "endColumn": 110
+        }
+      ],
+      "message": "Avoid debug statements since they impact on performance",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#avoiddebugstatements"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 255,
+          "startColumn": 20,
+          "endLine": 267,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc @return",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 255,
+          "startColumn": 20,
+          "endLine": 267,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing or mismatched ApexDoc @param",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 294,
+          "startColumn": 20,
+          "endLine": 364,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'populateTraceFromResponse(AgentTurnTrace, String)' has a cognitive complexity of 38, current threshold is 15",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 294,
+          "startColumn": 20,
+          "endLine": 364,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'populateTraceFromResponse(AgentTurnTrace, String)' has a cyclomatic complexity of 23.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "NcssCount",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Apex",
+        "Custom"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 294,
+          "startColumn": 20,
+          "endLine": 364,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'populateTraceFromResponse(AgentTurnTrace,String)' has a NCSS line count of 44 (limit: 40).",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#ncsscount"
+      ]
+    },
+    {
+      "rule": "AvoidDeeplyNestedIfStmts",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 311,
+          "startColumn": 21,
+          "endLine": 313,
+          "endColumn": 22
+        }
+      ],
+      "message": "Deeply nested if..then statements are hard to read",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoiddeeplynestedifstmts"
+      ]
+    },
+    {
+      "rule": "AvoidDeeplyNestedIfStmts",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 358,
+          "startColumn": 21,
+          "endLine": 360,
+          "endColumn": 22
+        }
+      ],
+      "message": "Deeply nested if..then statements are hard to read",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoiddeeplynestedifstmts"
+      ]
+    },
+    {
+      "rule": "CognitiveComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 396,
+          "startColumn": 20,
+          "endLine": 413,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'collectCitedReferences(Object, List<String>)' has a cognitive complexity of 17, current threshold is 15",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cognitivecomplexity"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClient.cls",
+          "startLine": 396,
+          "startColumn": 20,
+          "endLine": 413,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'collectCitedReferences(Object, List<String>)' has a cyclomatic complexity of 10.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 8
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 9,
+          "startColumn": 16,
+          "endLine": 13,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AvoidBooleanMethodParameters",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 9,
+          "startColumn": 61,
+          "endLine": 9,
+          "endColumn": 81
+        }
+      ],
+      "message": "Avoid Boolean method parameters",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#avoidbooleanmethodparameters"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 15,
+          "startColumn": 16,
+          "endLine": 25,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 28,
+          "startColumn": 5,
+          "endLine": 28,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 29,
+          "startColumn": 12,
+          "endLine": 41,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 43,
+          "startColumn": 5,
+          "endLine": 43,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 44,
+          "startColumn": 12,
+          "endLine": 88,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 90,
+          "startColumn": 5,
+          "endLine": 90,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 91,
+          "startColumn": 12,
+          "endLine": 117,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 119,
+          "startColumn": 5,
+          "endLine": 119,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 120,
+          "startColumn": 12,
+          "endLine": 143,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 145,
+          "startColumn": 5,
+          "endLine": 145,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuardRuntimeClientTest.cls",
+          "startLine": 146,
+          "startColumn": 12,
+          "endLine": 157,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteAction.cls",
+          "startLine": 6,
+          "startColumn": 12,
+          "endLine": 9,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteAction.cls",
+          "startLine": 11,
+          "startColumn": 12,
+          "endLine": 17,
+          "endColumn": 6
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "CyclomaticComplexity",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Design",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteAction.cls",
+          "startLine": 28,
+          "startColumn": 19,
+          "endLine": 75,
+          "endColumn": 6
+        }
+      ],
+      "message": "The method 'runSuites(List<SuiteRunRequest>)' has a cyclomatic complexity of 11.",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_design.html#cyclomaticcomplexity"
+      ]
+    },
+    {
+      "rule": "OperationWithLimitsInLoop",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteAction.cls",
+          "startLine": 67,
+          "startColumn": 13,
+          "endLine": 67,
+          "endColumn": 72
+        }
+      ],
+      "message": "Avoid operations in loops that may hit governor limits",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#operationwithlimitsinloop"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 8
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexDoc",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "Documentation",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 4,
+          "startColumn": 16,
+          "endLine": 9,
+          "endColumn": 10
+        }
+      ],
+      "message": "Missing ApexDoc comment",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 12,
+          "startColumn": 5,
+          "endLine": 12,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 13,
+          "startColumn": 12,
+          "endLine": 51,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "AnnotationsNamingConventions",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "CodeStyle",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 53,
+          "startColumn": 5,
+          "endLine": 53,
+          "endColumn": 12
+        }
+      ],
+      "message": "The annotation @isTest should be in PascalCase: @IsTest",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#annotationsnamingconventions"
+      ]
+    },
+    {
+      "rule": "ApexUnitTestClassShouldHaveRunAs",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "file": "force-app/main/default/classes/AgentGuard_RunSuiteActionTest.cls",
+          "startLine": 54,
+          "startColumn": 12,
+          "endLine": 68,
+          "endColumn": 6
+        }
+      ],
+      "message": "Apex unit test classes should have at least one System.runAs() call",
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "rule": "UninstantiableEngineError",
+      "engine": "flow",
+      "severity": 1,
+      "tags": [],
+      "primaryLocationIndex": 0,
+      "locations": [
+        {
+          "comment": "Undefined Code Location"
+        }
+      ],
+      "message": "The engine with name 'flow' could not be instantiated. Error: Could not locate a Python v3.10.0+ install using any of the following: [\"python3\",\"python\"].\nIf you have python installed, specify the command in your Code Analyzer configuration as the value of property 'engines.flow.python_command'.\nIf you choose not to install python, you may disable the 'flow' engine in your Code Analyzer configuration by setting 'engines.flow.disable_engine' to true.\n    at FlowScannerEngineConfigValueExtractor.findPythonCommandPathFromEnvironment (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-flow-engine/dist/config.js:69:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async FlowScannerEngineConfigValueExtractor.extractPythonCommandPath (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-flow-engine/dist/config.js:36:13)\n    at async validateAndNormalizeConfig (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-flow-engine/dist/config.js:23:25)\n    at async FlowScannerEnginePlugin.createEngineConfig (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-flow-engine/dist/plugin.js:25:16)\n    at async CodeAnalyzer.createAndAddEngineIfValid (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-core/dist/code-analyzer.js:622:34)\n    at async Promise.all (index 0)\n    at async CodeAnalyzer.addEnginePlugin (/Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/node_modules/@salesforce/code-analyzer-core/dist/code-analyzer.js:163:9)\n    at async Promise.all (index 4)\n    at async RunAction.execute (file:///Users/user/.local/share/sf/node_modules/@salesforce/plugin-code-analyzer/lib/lib/actions/RunAction.js:36:9)",
+      "resources": []
+    }
+  ]
+}

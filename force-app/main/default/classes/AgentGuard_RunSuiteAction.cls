@@ -54,6 +54,13 @@ public with sharing class AgentGuard_RunSuiteAction {
             );
         }
 
+        if (runsToInsert.size() > Limits.getLimitQueueableJobs()) {
+            throw new IllegalArgumentException(
+                'Cannot queue ' + runsToInsert.size() + ' test runs in a single invocation; ' +
+                'the org allows at most ' + Limits.getLimitQueueableJobs() + ' queueable jobs per transaction.'
+            );
+        }
+
         Database.insert(runsToInsert, AccessLevel.USER_MODE);
 
         for (Agent_Test_Run__c runRec : runsToInsert) {

@@ -257,6 +257,7 @@ public with sharing class AgentGuardRuntimeClient {
             SELECT Id
             FROM BotDefinition
             WHERE DeveloperName = :agentApiName
+            WITH USER_MODE
             LIMIT 1
         ];
         if (bots.isEmpty()) {

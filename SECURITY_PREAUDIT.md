@@ -102,7 +102,10 @@ All 25 `RedTeam_Template.*.md-meta.xml` records were parsed and checked for `For
 
 - **Critical / High Issues:** 0
 - **Medium Issues:** 0
-- **Pending Verification (Scratch Org / CLI Setup):**
-  - Live Scratch Org payload capture to verify the `AgentGuardRuntimeClient` sync trace shape against a live Agentforce runtime endpoint.
-  - `sf code-analyzer run` execution once the `code-analyzer` JIT CLI plugin is installed in CI or locally.
-- **Status:** **READY FOR 2GP PACKAGING & SCRATCH ORG VERIFICATION** (complete live Scratch Org payload capture and `sf code-analyzer run` prior to formal AppExchange Security Review submission).
+- **Live payload capture:** DONE (2026-11-15) — live suite run against the AgentGuardDev dev org (not a scratch org) via `AgentGuardRuntimeClient.executeSingleTurn`, 5/5 passed; raw Agent API response shape captured in `Raw_Trace_JSON__c`.
+- **`sf code-analyzer run`:** DONE (2026-11-21) — `code-analyzer 5.16.0` run against `force-app` with the Recommended rule set. Initial run: 129 violations (1 Critical, 2 High, 35 Moderate, 91 Low). The "Critical" hit was a `flow` engine startup failure (needs Python 3.10+, this environment has 3.9) — moot, since the package contains zero Flow metadata for that engine to scan. Both High findings were fixed and verified via a redeploy + full Apex test pass + a live 5/5 suite run:
+  - `ApexCRUDViolation` in `AgentGuardRuntimeClient.resolveAgentId` (missing CRUD/FLS enforcement on a `BotDefinition` query) — fixed by adding `WITH USER_MODE`.
+  - `no-unused-vars` in `agentGuardResultInspector.js` (unused catch binding) — fixed by using an optional catch binding.
+  - Also hardened `AgentGuard_RunSuiteAction.runSuites`'s `System.enqueueJob` loop (PMD `OperationWithLimitsInLoop`, Moderate) with an explicit `Limits.getLimitQueueableJobs()` guard that fails fast with a clear error instead of an unhandled `LimitException` on a large bulk Flow/Agent invocation. PMD still flags the loop itself (its rule can't recognize the guard) — accepted as a known static-analysis limitation, not a real defect.
+  - Remaining 128 violations (1 moot Critical, 36 Moderate, 91 Low) are style/doc-comment/SLDS-hardcoded-value findings, not security defects. Full results in `code-analyzer-results.json` / `.html`.
+- **Status:** **READY FOR 2GP PACKAGING & FORMAL APPEXCHANGE SECURITY REVIEW SUBMISSION.**

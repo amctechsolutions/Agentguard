@@ -43,7 +43,7 @@ export default class AgentGuardResultInspector extends LightningElement {
         try {
             const parsed = typeof raw === 'string' ? JSON.parse(raw) : raw;
             return JSON.stringify(parsed, null, 2);
-        } catch (e) {
+        } catch {
             return String(raw);
         }
     }
